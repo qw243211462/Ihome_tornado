@@ -3,3 +3,30 @@
 [I 180112 13:39:19 web:2064] 304 GET / (::1) 2.08ms
 [I 180112 13:41:22 autoreload:198] /home/tong/PycharmProjects/Ihome_tornado/config.py modified; restarting server
 [I 180112 13:41:26 autoreload:198] /home/tong/PycharmProjects/Ihome_tornado/config.py modified; restarting server
+[E 180112 16:35:58 Passport:8] error msg
+[I 180112 16:35:58 web:2064] 304 GET / (::1) 1.48ms
+[E 180112 16:36:00 Passport:8] error msg
+[I 180112 16:36:00 web:2064] 304 GET / (::1) 0.75ms
+[E 180112 16:36:00 Passport:8] error msg
+[I 180112 16:36:00 web:2064] 304 GET / (::1) 0.68ms
+[E 180112 16:36:01 Passport:8] error msg
+[I 180112 16:36:01 web:2064] 304 GET / (::1) 1.02ms
+[E 180112 16:38:10 web:1591] Uncaught exception GET /api/imagecode?codeid=123&pcodeid (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8000', method='GET', uri='/api/imagecode?codeid=123&pcodeid', version='HTTP/1.1', remote_ip='::1', headers={'Accept-Language': 'zh-CN,zh;q=0.9', 'Accept-Encoding': 'gzip, deflate, br', 'Host': 'localhost:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Cookie': 'Pycharm-f6b1f10f=e1b8206c-ada8-4159-bc10-5feae555ac69; username-localhost-8888="2|1:0|10:1513663774|23:username-localhost-8888|44:ZDIyOWMyYzY5Y2RmNDJhY2I5YTFkN2VkZDJjZjhhZTI=|8cf568b67cafc6cdffe5568a2b74d4d119584230c1e8138764d47e5f4bb00ad6"; Pycharm-5e931dee=8ec5db60-82eb-4429-9d66-20ebffb50f93; session_id="2|1:0|10:1514620790|10:session_id|44:MGUwYzcxNmQyOTgyNDNiZmFhNDliMTVkNTU4MzdhYjE=|10226c1b7cf5ee073ae4248faaa0e95b7d53bd72203232d8cc988dfd55f33bc9"', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'})
+    Traceback (most recent call last):
+      File "/home/tong/Virtualenv/Ihome_tornado/lib/python2.7/site-packages/tornado/web.py", line 1510, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/tong/PycharmProjects/Ihome_tornado/handlers/VerifyCode.py", line 19, in get
+        name,text,image = captcha.generate_captcha()
+    AttributeError: 'module' object has no attribute 'generate_captcha'
+[E 180112 16:38:10 web:2064] 500 GET /api/imagecode?codeid=123&pcodeid (::1) 9.22ms
+[E 180112 16:38:12 web:1591] Uncaught exception GET /api/imagecode?codeid=123&pcodeid (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8000', method='GET', uri='/api/imagecode?codeid=123&pcodeid', version='HTTP/1.1', remote_ip='::1', headers={'Accept-Language': 'zh-CN,zh;q=0.9', 'Accept-Encoding': 'gzip, deflate, br', 'Host': 'localhost:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'username-localhost-8888="2|1:0|10:1513663774|23:username-localhost-8888|44:ZDIyOWMyYzY5Y2RmNDJhY2I5YTFkN2VkZDJjZjhhZTI=|8cf568b67cafc6cdffe5568a2b74d4d119584230c1e8138764d47e5f4bb00ad6"; session_id="2|1:0|10:1514620790|10:session_id|44:MGUwYzcxNmQyOTgyNDNiZmFhNDliMTVkNTU4MzdhYjE=|10226c1b7cf5ee073ae4248faaa0e95b7d53bd72203232d8cc988dfd55f33bc9"', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/home/tong/Virtualenv/Ihome_tornado/lib/python2.7/site-packages/tornado/web.py", line 1510, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/tong/PycharmProjects/Ihome_tornado/handlers/VerifyCode.py", line 19, in get
+        name,text,image = captcha.generate_captcha()
+    AttributeError: 'module' object has no attribute 'generate_captcha'
+[E 180112 16:38:12 web:2064] 500 GET /api/imagecode?codeid=123&pcodeid (::1) 0.96ms
+[I 180112 16:38:30 autoreload:198] server.py modified; restarting server

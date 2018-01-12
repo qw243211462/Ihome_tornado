@@ -31,6 +31,8 @@ class Application(tornado.web.Application):
         self.redis = redis.StrictRedis(**config.redis_options)
 
 def main():
+    options.logging = config.log_level  #修改日志级别  |debug|info|warning|error|none
+    options.log_file_prefix = config.log_file  #将日志保存到本地文件
     tornado.options.parse_command_line()
     app = Application(
         handlers,**config.settings

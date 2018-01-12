@@ -24,3 +24,7 @@ redis_options = dict(
     host = '127.0.0.1',
     port = 6379,
 )
+
+#log
+log_file = os.path.join(os.path.dirname(__file__),"logs/log")
+log_level = "debug"

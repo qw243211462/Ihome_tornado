@@ -35,7 +35,8 @@ def main():
     #options.log_file_prefix = config.log_file  #将日志保存到本地文件
     tornado.options.parse_command_line()
     app = Application(
-        handlers,**config.settings
+        handlers,
+        **config.settings
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(options.port)

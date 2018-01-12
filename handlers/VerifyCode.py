@@ -13,7 +13,7 @@ class ImageCodeHandler(BaseHandler):
         pre_code_id = self.get_argument("pcodeid")
         if pre_code_id:
             try:
-                self.redis.delete("")
+                self.redis.delete("image_code_%s" %pre_code_id)
             except Exception as e:
                 logging.error(e)
         name,text,image = captcha.captcha.generate_captcha()

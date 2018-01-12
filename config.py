@@ -3,13 +3,12 @@
 import os
 
 #Application配置参数
-settings = {
-    "static_path":os.path.join(os.path.dirname(__file__),"static"),
-    "template_path":os.path.join(os.path.dirname(__file__),"template"),
-    "cookie_secret":'wangmaotong',
-    "xsrf_cookies":True,
-    "debug":True,
-}
+settings = dict(
+    static_path = os.path.join(os.path.dirname(__file__),"static"),
+    #template_path = os.path.join(os.path.dirname(__file__),"template"),
+    xsrf_cookies = True,
+    debug = True,
+)
 
 #mysql
 mysql_options = dict(
